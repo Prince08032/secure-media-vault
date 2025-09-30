@@ -1,0 +1,7 @@
+{
+  "name": "edge-hash-object",
+  "version": "0.1.0",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.20.0"
+  }
+}

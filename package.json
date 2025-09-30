@@ -1,0 +1,20 @@
+{
+  "name": "secure-media-vault",
+  "private": true,
+  "version": "0.2.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "edge"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter api dev\" \"pnpm --filter web dev\"",
+    "dev:api": "pnpm --filter api dev",
+    "dev:web": "pnpm --filter web dev",
+    "test": "pnpm -w -r test",
+    "build": "pnpm -w -r build"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
