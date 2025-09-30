@@ -16,7 +16,7 @@ type FileTile = {
   editing?: boolean;
 };
 
-const API = (import.meta.env.VITE_GRAPHQL_URL) || 'http://localhost:4000/graphql';
+const API = 'http://localhost:4000/graphql';
 
 function human(n:number){ return (n/1024).toFixed(2)+' KB'; }
 
@@ -256,7 +256,7 @@ async function simulateHashMismatch(tile: FileTile) {
         Drag & drop files here
       </div>
 
-      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,260px)',gap:12}}>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,360px)',gap:12}}>
 {tiles.map(t=>(
   <div key={t.id} style={{border:'1px solid #ddd',padding:12,borderRadius:8}}>
     {t.editing ? (
@@ -278,12 +278,12 @@ async function simulateHashMismatch(tile: FileTile) {
       <div style={{width:Math.max(4,t.progress)+'%',height:8,background:'#4caf50',borderRadius:4}}></div>
     </div>
     <div style={{marginTop:8}}><small>Status: {t.status} {t.countdown? `• ${t.countdown}s` : ''}</small></div>
-    <div style={{display:'flex',gap:8,marginTop:8}}>
+    <div style={{display:'flex',gap:10,marginTop:8}}>
       <button onClick={()=>uploadTile(t)} disabled={t.status!=='idle'}>Upload</button>
       <button onClick={()=>cancelUpload(t.id)} disabled={!t.controller}>Cancel</button>
       <button onClick={()=>retryTile(t.id)}>Retry</button>
       {t.assetId && <button onClick={()=>copyLink(t.assetId, t.id)}>Copy link</button>}
-        {t.assetId && <button onClick={()=>simulateHashMismatch(t)}>Corrupt Demo</button>}
+      {t.assetId && <button onClick={()=>simulateHashMismatch(t)}>Corrupt Demo</button>}
     </div>
   </div>
 ))}

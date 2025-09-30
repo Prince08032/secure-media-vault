@@ -11,7 +11,8 @@
     "dev": "concurrently \"pnpm --filter api dev\" \"pnpm --filter web dev\"",
     "dev:api": "pnpm --filter api dev",
     "dev:web": "pnpm --filter web dev",
-    "test": "pnpm -w -r test",
+    "test": "pnpm --filter api test",
+    "db:migrate": "node ./scripts/migrate.js",
     "build": "pnpm -w -r build"
   },
   "dependencies": {

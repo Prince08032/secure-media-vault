@@ -2,9 +2,10 @@
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
 dotenv.config();
-export const SUPABASE_URL = process.env.SUPABASE_URL || "https://silezfkplusyvrtggbwk.supabase.co";
-export const SUPABASE_SERVICE_ROLE = process.env.SUPABASE_SERVICE_ROLE || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNpbGV6ZmtwbHVzeXZydGdnYndrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1ODcxNjk2NywiZXhwIjoyMDc0MjkyOTY3fQ.Kj7Dnj3tpfBTSp0mqE0Xsno9le9ylmeA6m2Gkd7fW2w";
-export const SUPABASE_ANON = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNpbGV6ZmtwbHVzeXZydGdnYndrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg3MTY5NjcsImV4cCI6MjA3NDI5Mjk2N30.6EMVG99KoCB29YjiIPNPcoMVfRqh504k3buvIYauuXc";
+
+export const SUPABASE_URL = process.env.SUPABASE_URL ;
+export const SUPABASE_SERVICE_ROLE = process.env.SUPABASE_SERVICE_ROLE ;
+export const SUPABASE_ANON = process.env.SUPABASE_ANON_KEY ;
 export const BUCKET = process.env.SUPABASE_PRIVATE_BUCKET || 'private';
 export const EDGE_HASH_URL = process.env.EDGE_HASH_URL || '';
 
