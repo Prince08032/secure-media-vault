@@ -27,6 +27,39 @@ This repository implements the Secure Media Vault spec: signed uploads, row-scop
 - `VITE_USER_ID` - UUID 
 - `EDGE_HASH_URL` (optional) - deploy `edge/hash-object` and set this to call it from API (optional)
 
+## 🔑 Supabase Keys & User UUID Setup  
+
+Follow these steps to obtain the required keys for configuration:  
+
+### 1. Supabase URL  
+- Go to your [Supabase Dashboard](https://app.supabase.com/).  
+- Open your project.  
+- Navigate to **Project Settings → API**.  
+- Copy the **Project URL** → this is your **Supabase URL**.  
+
+---
+
+### 2. Anon Key  
+- In **Project Settings → API**, scroll to **Project API keys**.  
+- Copy the **anon public key**.  
+- ✅ Safe to use in the **frontend**.  
+
+---
+
+### 3. Service Role Key  
+- In **Project Settings → API**, under **Project API keys**, copy the **service_role secret key**.  
+- ⚠️ Use this only in the **backend/server**.  
+- ❌ Never expose this key in client-side code.  
+
+---
+
+### 4. User UUID  
+- Go to **Authentication → Users** in the Supabase dashboard.  
+- Click **Add User** and create a new user (email/password or magic link).  
+- After creating, open the **Users table** → you will see a column named **ID**.  
+- This **ID** is the **User UUID**.  
+
+
 **Security note:** Ensure `SUPABASE_SERVICE_ROLE` is provided only via environment variables (CI secret or server environment). Do **not** commit service role keys into source control.
 
 ---
