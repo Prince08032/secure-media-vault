@@ -1,6 +1,6 @@
 # Secure Media Vault — Full Implementation (Supabase-ready)
 
-This repository implements the Secure Media Vault spec: signed uploads, row-scoped access, expiring links, single-use upload tickets, MIME sniffing, and share-by-email.
+This repository implements the Secure Media Vault spec: signed uploads, row-scoped access, expiring links, single-use upload tickets and MIME sniffing.
 
 ---
 
