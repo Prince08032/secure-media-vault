@@ -8,15 +8,16 @@ async function main() {
   const server = createServer({
     schema,
     cors: {
-      origin: '*', // ✅ Allow all origins
-      credentials: true,
+      origin: '*', // Allow all origins
+      methods: ['GET', 'POST', 'OPTIONS'],
+      allowedHeaders: ['Content-Type', 'x-user-id', 'Authorization'],
     },
     port: Number(process.env.PORT || 4000),
     context: ({ request }) => ({ headers: request.headers }),
   });
 
-  server.start().then(() => 
-    console.log(`GraphQL server running on http://localhost:${process.env.PORT || 4000}`)
+  server.start().then(() =>
+    console.log(`✅ GraphQL server running on http://localhost:${process.env.PORT || 4000}`)
   );
 }
 
