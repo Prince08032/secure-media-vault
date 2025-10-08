@@ -8,9 +8,7 @@ async function main() {
   const server = createServer({
     schema,
     cors: {
-      origin: '*', // Allow all origins
-      methods: ['GET', 'POST', 'OPTIONS'],
-      allowedHeaders: ['Content-Type', 'x-user-id', 'Authorization'],
+      origin: 'https://web-gmiw.onrender.com/', // Allow all origins
     },
     port: Number(process.env.PORT || 4000),
     context: ({ request }) => ({ headers: request.headers }),
