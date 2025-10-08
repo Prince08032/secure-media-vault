@@ -16,7 +16,7 @@ type FileTile = {
   editing?: boolean;
 };
 
-const API = 'http://localhost:4000/graphql';
+const API = 'https://secure-media-vault-fqba.onrender.com';
 
 function human(n:number){ return (n/1024).toFixed(2)+' KB'; }
 
