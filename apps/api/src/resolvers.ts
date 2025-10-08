@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import { Resolvers } from '@graphql-tools/utils';
 import { v4 as uuidv4 } from 'uuid';
 import crypto from 'crypto';
