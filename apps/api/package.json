@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=production ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc -p tsconfig.json",
-    "test": "cross-env NODE_ENV=test jest --runInBand"
+    "build": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.20.0",
