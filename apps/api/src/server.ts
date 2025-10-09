@@ -21,6 +21,7 @@ dotenv.config();
       'Origin',
       'X-Requested-With',
       'apollo-require-preflight',
+      'x-user-id'
     ]
     //  allowedHeaders: ['Content-Type', 'x-user-id', 'Authorization'],
     //  credentials: true,
