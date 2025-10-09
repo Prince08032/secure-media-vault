@@ -13,6 +13,14 @@ dotenv.config();
         'https://web-gmiw.onrender.com', // ✅ your frontend app
         'http://localhost:3000',         // optional for local dev
       ],
+      allowedHeaders: [
+      'Content-Type',
+      'Authorization',
+      'Accept',
+      'Origin',
+      'X-Requested-With',
+      'apollo-require-preflight',
+    ]
      // methods: ['GET', 'POST', 'OPTIONS'],
     //  allowedHeaders: ['Content-Type', 'x-user-id', 'Authorization'],
     //  credentials: true,
