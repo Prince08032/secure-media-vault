@@ -3,7 +3,7 @@ import { createSchema } from './schema';
 import dotenv from 'dotenv';
 dotenv.config();
 
-async function main() {
+//async function main() {
   const schema = createSchema();
 
   const server = createServer({
@@ -24,9 +24,9 @@ async function main() {
   server.start().then(() =>
     console.log(`🚀 GraphQL server running on port ${process.env.PORT || 4000}`)
   );
-}
+//}
 
-main();
+//main();
 
 
 // import { createServer } from 'graphql-yoga';
