@@ -13,9 +13,9 @@ dotenv.config();
         'https://web-gmiw.onrender.com', // ✅ your frontend app
         'http://localhost:3000',         // optional for local dev
       ],
-      methods: ['GET', 'POST', 'OPTIONS'],
-      allowedHeaders: ['Content-Type', 'x-user-id', 'Authorization'],
-      credentials: true,
+     // methods: ['GET', 'POST', 'OPTIONS'],
+    //  allowedHeaders: ['Content-Type', 'x-user-id', 'Authorization'],
+    //  credentials: true,
     },
     port: Number(process.env.PORT || 4000),
     context: ({ request }) => ({ headers: request.headers }),
