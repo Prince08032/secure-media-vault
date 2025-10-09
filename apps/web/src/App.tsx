@@ -16,7 +16,7 @@ type FileTile = {
   editing?: boolean;
 };
 
-const API = 'https://secure-media-vault-4swc.onrender.com/';
+const API = 'https://secure-media-vault-4swc.onrender.com/graphql';
 
 function human(n:number){ return (n/1024).toFixed(2)+' KB'; }
 
