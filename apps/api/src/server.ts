@@ -10,10 +10,11 @@ dotenv.config();
     schema,
     cors: {
       origin: [
-        'https://web-gmiw.onrender.com', // ✅ your frontend app
-        'http://localhost:3000',         // optional for local dev
-      ],
-      allowedHeaders: [
+      'https://web-gmiw.onrender.com',
+      'http://localhost:3000',
+    ],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: [
       'Content-Type',
       'Authorization',
       'Accept',
@@ -21,7 +22,6 @@ dotenv.config();
       'X-Requested-With',
       'apollo-require-preflight',
     ]
-     // methods: ['GET', 'POST', 'OPTIONS'],
     //  allowedHeaders: ['Content-Type', 'x-user-id', 'Authorization'],
     //  credentials: true,
     },
